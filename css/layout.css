@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 종류별 웹브라우저(크롬,파이어폭스,엣지 등)의 모든 사이즈를 초기화시키는 값 */
+
+.wrap {
+  background-color: skyblue;
+}
