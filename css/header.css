@@ -1,4 +1,12 @@
+body {
+  height: 5000px;
+}
+
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
@@ -72,20 +80,58 @@
 }
 
 .header_top_right {
+  position: relative;
 }
 .link_site {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+.link_site li {
+  position: relative;
+}
+
+.link_site_line::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 4px;
+  width: 1px;
+  height: 12px;
+  background-color: #dfdfdf;
+}
+
 .main_menu {
   display: flex;
+}
+.main_menu li {
+}
+.main_menu li a {
+  position: relative;
+  font-size: 21px;
+  font-weight: 600;
+  padding: 14px;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
 }
 
 .header_bottom {
   display: flex;
   justify-content: space-between;
 }
+
 .member_menu {
   display: flex;
   gap: 25px;
@@ -94,4 +140,57 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  height: 48px;
+}
+
+.mobile_header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  z-index: 999;
+  width: 100%;
+}
+
+.mobile_menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.mobile_menu li a {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.mobile_search {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* 위의 코드는 pc화면의 설정 */
+
+@media all and (max-width: 1280px) {
+  .layout {
+    min-width: 1024px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+  .mobile_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .layout {
+    min-width: 760px;
+  }
 }
