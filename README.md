@@ -452,6 +452,7 @@ eotkd::before {
 ### 4.9. PostCSS Sorting 설치 및 설정
 
 - css 속성 정렬하기
+- 단축키 생성 : `shift + alt + p` 등록
 - [참고](https://velog.io/@leejpsd/NHN-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98%EC%97%90-%EB%94%B0%EB%A5%B8-CSS-%EC%84%A0%EC%96%B8%EC%88%9C%EC%84%9C-PostCSS-Sorting-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0)
 
 ```json

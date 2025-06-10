@@ -15,10 +15,9 @@
 }
 .banner_slide_item {
   display: block;
-  border-radius: 15px;
   overflow: hidden;
   height: 345px;
-  background-color: red;
+  border-radius: 15px;
 }
 .banner_slide_item img {
   /* 이미지를 보기좋게 비율 유지하면서 채워서 보이기 */
@@ -28,43 +27,44 @@
 }
 
 .banner_slide_prev {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: 100;
-  transform: translateY(-50%) translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #e5e5e5;
-  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
   width: 48px;
   height: 48px;
-  border-radius: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 24px;
 }
 .banner_slide_prev img {
   transform: rotate(180deg);
 }
 
 .banner_slide_next {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: 100;
-  transform: translateY(-50%) translateX(50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #e5e5e5;
-  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 100;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  transform: translateY(-50%) translateX(50%);
+  border-radius: 50%;
 }
 
+/* 처음에는 페이지네이션이 안보인다. */
 .banner_slide_pg {
   display: none;
 }
@@ -76,17 +76,56 @@
 }
 
 @media all and (max-width: 1024px) {
-  .sw_banner {
-    max-width: 350px;
+  /* 다중으로 선택함 ( , 로 구분함) */
+  .banner_slide_next,
+  .banner_slide_prev {
+    display: none;
   }
 
   .banner_slide_item {
     height: 202px;
+  }
+  /* 페이지네이션이 보여야 함 */
+  .banner_slide_pg {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  /* 기본 버튼들의 모양 css */
+  .banner_slide_pg .swiper-pagination-bullet {
+  }
+  /* 포커스 된 버튼의 모양 css */
+  .banner_slide_pg .swiper-pagination-bullet-active {
+    background: #000000;
   }
 }
 
 @media all and (max-width: 760px) {
   .sw_banner {
     max-width: 350px;
+  }
+  /* 페이지네이션 위치 조절 */
+  .banner_slide_pg {
+    align-items: center;
+
+    padding-top: 0px;
+    /* z-index 가 안되는 경우는 position 이 없어서 */
+    position: relative;
+    z-index: 99999999;
+    /* 위치말고 내용물만 이동함 */
+    transform: translateY(-10px);
+  }
+  .banner_slide_pg .swiper-pagination-bullet {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+  .banner_slide_pg .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    opacity: 1;
   }
 }
