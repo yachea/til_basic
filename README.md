@@ -274,6 +274,10 @@
 
 - 글자를 굵게 표현함.
 
+### 3.3.9. <section></section> 태그
+
+- 시멘틱 태그로서 내용 구역 구분
+
 # 4. CSS의 이해
 
 - css 선택자
@@ -846,3 +850,137 @@ if(true 나 false 나 조건 판단){
 ```
 
 # 6. Swiper 슬라이드의 이해
+
+- 대표적인 슬라이드 라이브러리
+- Swriper (https://swiperjs.com/)
+- Slick (https://kenwheeler.github.io/slick)
+- BxSlider (https://bxslider.com/)
+
+## 6.1. Swiper 슬라이드 사용하는 이유
+
+- 안정성, 반응형, 모바일 터치 지원
+- React(Next.js), Vue, Svlet 등의 FrontEnd 기술지원
+- TypeScript 지원 및 예제 지원
+
+## 6.2. 기본적인 기능은 예제에서 확인 후 활용
+
+- https://swiperjs.com/demos
+- Core 소스: 웹퍼블리싱 참조
+- React 소스: FE 에서 참조
+
+## 6.3. 아주 특별한 기능을 구현하는 경우(예제에서 없는 기능)
+
+- API 문서 참조 : https://swiperjs.com/swiper-api
+
+## 6.4. Core 샘플 활용하기 (웹퍼블리싱)
+
+### 6.4.1. html 에 반드시 배치하기 (2줄)
+
+- 반드시 우리의 css 와 js 파일 연결 코드 보다 윗줄에 있어야 합니다.
+
+```html
+<!-- Link Swiper's CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+```
+
+### 6.4.2. div 클래스 명에서 절대로 수정하면 안됨
+
+```html
+<div class="swiper 개발자클래스">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+  </div>
+</div>
+```
+
+### 6.4.3. swiper 슬라이드 작동되는지 확인부터 하기
+
+- load 는 이미지 등의 용량이 큰 파일이 로드 되면 실행하도록 함.
+
+```js
+window.addEventListener("load", function () {
+  // swiper 만들기
+  new Swiper(".개발자클래스", {});
+});
+```
+
+### 6.4.4. 옵션들
+
+- slidesPerView : 화면당 보여줄 슬라이드 수
+- spaceBetween : 슬라이드의 간격(픽셀단위)
+- slidesPerGroup : 한 번 이동 시 몇 개의 슬라이드 이동 갯수
+- breakpoints : 웹브라우저 너비(픽셀) 계산 후 슬라이드 배치
+
+```js
+window.addEventListener("load", function () {
+  new Swiper(".sw_tour", {
+    slidesPerView: 1,
+    spaceBetween: 26,
+    slidesPerGroup: 1,
+    // 반응형
+    breakpoints: {
+      760: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+});
+```
+
+- 그리드를 이용한 2줄 이상 출력하기 (인터파크예제)
+
+```js
+window.addEventListener("load", function () {
+  new Swiper(".sw_tour", {
+    slidesPerView: 5,
+    grid: {
+      rows: 2,
+      fill: "row",
+    },
+    spaceBetween: 26,
+    slidesPerGroup: 1,
+
+    // 반응형
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
+      },
+    },
+  });
+});
+```
+
+- 좌측, 우측 슬라이드 이동
+- 첫 페이지와 마지막 페이지에서 버튼 숨기기 적용
+
+```js
+    navigation: {
+      nextEl: ".다음버튼클래스명",
+      prevEl: ".이전버튼클래스명",
+    },
+```
