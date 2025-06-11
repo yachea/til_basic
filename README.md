@@ -254,6 +254,26 @@
 - 아이콘은 https://react-icons.github.io/react-icons/ 활용
 - `<img src="이미지경로/파일명.확장자" alt="대체글" />`
 
+### 3.3.5. h태그(Heading)
+
+- 문서의 타이틀 역할을 함을 표현함.
+- h1 ~ h6 로 구성
+- html 문서에서 h1 은 한번만 사용하기를 권장함.
+- 각 영역별로 h2 도 한번만 사용하기를 권장함.
+
+### 3.3.6. p태그(Paragraph)
+
+- 글자로 된 문단작성 시 활용
+- diplayl: block 임
+
+### 3.3.7. <br /> 태그
+
+- 한 줄 내림
+
+### 3.3.8. <b></b> 태그
+
+- 글자를 굵게 표현함.
+
 # 4. CSS의 이해
 
 - css 선택자
@@ -620,6 +640,16 @@ eotkd::before {
   }
 ```
 
+## 4.10. 한줄 말 줄임 코드 (... 처리)
+
+```css
+선택 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+```
+
 # 5. javaScript 의 이해
 
 - Java 는 객체지향 프로그래밍, javaScript 는 스크립트 프로그래밍
@@ -814,3 +844,5 @@ if(true 나 false 나 조건 판단){
   // false 면 실행
 }
 ```
+
+# 6. Swiper 슬라이드의 이해
