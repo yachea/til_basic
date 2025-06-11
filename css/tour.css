@@ -89,11 +89,11 @@
   object-fit: cover;
 }
 .tour_item_info {
-  height: calc(100% - 255px);
   padding: 20px;
   border: 1px solid #f0f0f0;
   border-top: none;
   position: relative;
+  height: calc(100% - 255px);
   /* 위왼쪽 위오른쪽 아래왼쪽 아래오른쪽 */
   border-radius: 0 0 12px 12px;
 }
@@ -133,49 +133,67 @@
   font-weight: 700;
 }
 .tour_slide_prev {
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
-  left: 0;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  left: 0;
+  z-index: 999;
   width: 48px;
   height: 48px;
-  border-radius: 24px;
-  border: 1px solid #e5e5e5;
   background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   cursor: pointer;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 24px;
 }
 .tour_slide_prev img {
   transform: rotate(180deg);
 }
 .tour_slide_next {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%) translateX(50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  transform: translateY(-50%) translateX(50%);
+  border-radius: 24px;
 }
 .tour_more {
-  padding-top: 50px;
   display: flex;
   justify-content: center;
+  padding-top: 50px;
 }
 .tour_more_bt {
   display: flex;
+  gap: 7px;
   align-items: center;
-  background-color: #fff;
-  height: 56px;
-  border-radius: 28px;
   padding: 0 30px;
   border: 1px solid #e5e5e5;
+  height: 56px;
+  background-color: #fff;
   font-size: 16px;
-  color: #333;
   font-weight: 700;
-  gap: 7px;
+  color: #333;
+  border-radius: 28px;
+}
+.swiper-button-disabled {
+  display: none !important;
+}
+
+/* 반응형 코드 */
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+  .tour_slide_wrap {
+    width: 1024px;
+  }
+}
+@media all and (max-width: 960px) {
+}
+@media all and (max-width: 760px) {
 }

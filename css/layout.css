@@ -8,6 +8,10 @@
   outline-style: none;
 }
 
+html {
+  overflow: hidden;
+}
+
 ul {
   /* 필수 */
   list-style: none;
