@@ -24,8 +24,12 @@
     <!-- trip 연결 -->
     <link rel="stylesheet" href="css/trip.css" />
     <script src="js/trip.js"></script>
+    <!-- live 연결 -->
     <link rel="stylesheet" href="css/live.css" />
     <script src="js/live.js"></script>
+    <!-- ticket 연결 -->
+    <link rel="stylesheet" href="css/ticket.css" />
+    <script src="js/ticket.js"></script>
   </head>
   <body>
     <!-- 영역구분: 내용과 바탕 -->
@@ -312,28 +316,28 @@
               <div class="swiper sw_trip">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">111</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">222</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">333</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">444</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">555</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">666</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">777</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="trip_slide_item">내용</a>
+                    <a href="#" class="trip_slide_item">888</a>
                   </div>
                 </div>
               </div>
@@ -355,7 +359,111 @@
           </div>
         </section>
         <!-- 티켓랭킹 -->
-        <div class="ticket"></div>
+        <section class="ticket">
+          <div class="layout">
+            <div class="ticket_header">
+              <div class="ticket_header_title">
+                <h2 class="ticket_main_title">티켓 랭킹</h2>
+                <p class="ticket_sub_title">오늘 뭐볼까? 지금 HOT한 공연</p>
+              </div>
+              <div class="ticket_category">
+                <ul class="ticket_button_list">
+                  <li><button class="ticket_focus">뮤지컬</button></li>
+                  <li><button>콘서트</button></li>
+                  <li><button>스포츠</button></li>
+                  <li><button>전시/행사</button></li>
+                  <li><button>클래식/무용</button></li>
+                  <li><button>아동/가족</button></li>
+                  <li><button>연극</button></li>
+                  <li><button>레저/캠핑</button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ticket_slide_wrap">
+              <!-- start swipter ticket 슬라이드 -->
+              <div class="swiper sw_ticket">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img src="images/ticket1.gif" alt="슬립노모어" />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img src="images/ticket2.gif" alt="맘마미아" />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img src="images/ticket3.gif" alt="팬텀" />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img src="images/ticket4.gif" alt="위키드" />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img src="images/ticket5.gif" alt="스트라빈스키" />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img src="images/ticket6.gif" alt="마리퀴리" />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">
+                      <div class="slide_t">
+                        <img
+                          src="images/ticket7.gif"
+                          alt="매디슨 카운티의 다리"
+                        />
+                      </div>
+                      <div class="slide_b">글자</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item">전체보기</a>
+                  </div>
+                </div>
+              </div>
+              <!-- end swipter ticket 슬라이드 -->
+
+              <button class="ticket_slide_prev">
+                <img src="images/slider_arrow.svg" alt="이전" />
+              </button>
+              <button class="ticket_slide_next">
+                <img src="images/slider_arrow.svg" alt="다음" />
+              </button>
+            </div>
+            <div class="ticket_footer">
+              <a href="#" class="ticket_more_bt">
+                티켓 홈 바로가기
+                <img src="images/icon_linkArrow.svg" alt="바로가기" />
+              </a>
+            </div>
+          </div>
+        </section>
         <!-- 라이브 -->
         <section class="live">
           <div class="layout">
@@ -369,28 +477,28 @@
               <div class="swiper sw_live">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">111</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">222</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">333</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">444</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">555</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">666</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">777</a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#" class="live_slide_item">내용</a>
+                    <a href="#" class="live_slide_item">888</a>
                   </div>
                 </div>
               </div>

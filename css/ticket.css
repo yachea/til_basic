@@ -1,45 +1,89 @@
-.trip {
+.ticket {
   padding-top: 60px;
   position: relative;
 }
 .layout {
   position: relative;
 }
-.trip_header {
-  padding-top: 65px;
-  padding-bottom: 30px;
+.ticket_header {
+  padding-top: 60px;
+
+  position: relative;
 }
-.trip_header_title {
-  display: flex;
+.ticket_header_title {
   gap: 5px;
   align-items: center;
   justify-self: center;
+  padding-bottom: 20px;
 }
-.trip_header_title img {
+.ticket_main_title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
 }
-.trip_header_text {
-  padding-top: 15px;
+.ticket_sub_title {
   font-size: 18px;
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
 }
-
-.trip_slide_wrap {
+.ticket_category {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 25px;
+}
+.ticket_button_list {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.ticket_button_list li {
+}
+.ticket_button_list li button {
+  padding: 0 20px;
+  border: 1px solid #e5e5e5;
+  height: 44px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.ticket_focus {
+  background-color: #333 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+  font-weight: 600 !important;
+}
+.ticket_slide_wrap {
   position: relative;
 }
-.tirp_slide {
+.ticket_slide {
   display: flex;
   gap: 20px;
 }
-.trip_slide_item {
+.ticket_slide_item {
   display: block;
   border: 1px solid #f0f0f0;
   width: 100%;
-  height: 400px;
+  height: 550px;
   border-radius: 11px;
+  background-color: #eee;
 }
-.trip_slide_prev {
+.ticket_slide_item .slide_t {
+  height: 400px;
+}
+.ticket_slide_item .slide_t img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ticket_slide_item .slide_b {
+}
+.ticket_slide_prev {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,10 +100,10 @@
   transform: translateX(-50%) translateY(-50%);
   border-radius: 24px;
 }
-.trip_slide_prev img {
+.ticket_slide_prev img {
   transform: rotate(180deg);
 }
-.trip_slide_next {
+.ticket_slide_next {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,12 +120,13 @@
   transform: translateX(50%) translateY(-50%);
   border-radius: 24px;
 }
-.trip_footer {
+.ticket_footer {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 25px;
 }
-.trip_more_bt {
+
+.ticket_more_bt {
   display: flex;
   gap: 7px;
   align-items: center;

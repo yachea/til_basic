@@ -1,12 +1,14 @@
 .live {
   position: relative;
-  padding-top: 30px;
+  padding-top: 60px;
 }
 .layout {
   position: relative;
 }
 .live_header {
+  padding-top: 60px;
   position: relative;
+  padding-bottom: 30px;
 }
 .live_header_title {
   text-align: center;
