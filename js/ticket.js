@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   new Swiper(".sw_ticket", {
-    slidesPerView: 8,
+    slidesPerView: 3,
     spaceBetween: 10,
     slidesPerGroup: 4,
     navigation: {

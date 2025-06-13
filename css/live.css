@@ -24,11 +24,123 @@
   padding-top: 25px;
 }
 .live_slide_item {
+  position: relative;
   display: block;
-  height: 455px;
+  max-height: 450px;
+  min-height: 286px;
+  height: 35.156vw;
   width: 100%;
-  border: 1px solid #f0f0f0;
   border-radius: 11px;
+  overflow: hidden;
+}
+.live_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.live_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.live_image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(34, 34, 34, 0.5),
+      rgba(34, 34, 34, 0.5)
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 18.65%, transparent 39.78%),
+    linear-gradient(180deg, transparent 56.75%, rgba(0, 0, 0, 0.4) 87.59%);
+}
+.live_info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+.live_state {
+  display: flex;
+}
+.live_wait {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 32px;
+  border-radius: 16px;
+  padding: 0 15px;
+  color: #fff;
+}
+.live_item_title {
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  line-height: 1.6;
+}
+.live_day {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.live_day_date {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  /* 줄내림 하지마 코드 */
+  white-space: nowrap;
+}
+.live_day_time {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.live_detail {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.live_detail_image {
+  height: 65px;
+  width: 65px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.live_detail_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.live_detail_title {
+  color: #fff;
+  font-size: 15px;
+  flex: 1;
+  height: 65px;
+  padding-top: 15px;
 }
 .live_slide_prev {
   position: absolute;
@@ -86,4 +198,15 @@
   font-weight: 700;
   color: #333;
   gap: 7px;
+}
+
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 10800px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 960px) {
+}
+@media all and (max-width: 7600px) {
 }

@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   // swiper 만들기
   new Swiper(".sw_live", {
-    slidesPerView: 8,
+    slidesPerView: 3,
     spaceBetween: 10,
     navigation: {
       nextEl: ".live_slide_next",
