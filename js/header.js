@@ -25,14 +25,16 @@ window.addEventListener("DOMContentLoaded", function () {
   const mainMenuA = document.querySelectorAll(".main_menu li a");
   //   멤버메뉴 a 태그들 : 여러 개
   const memberMenuA = document.querySelectorAll(".member_menu li a");
+  // 모바일 메뉴 참조
+  const mobileHeader = document.querySelector(".mobile_header");
 
   // 웹브라우저의 스크롤을 체크하겠다.
   window.addEventListener("scroll", function () {
     // 스크롤바의 최상단
     const scY = window.scrollY;
-    console.log(scY);
+    // console.log(scY);
     if (scY > 0) {
-      console.log("스크롤되었다");
+      // console.log("스크롤되었다");
       headerTop.classList.add("header_top_scroll");
       logo.classList.add("logo_hide");
       sale.classList.add("sale_hide");
@@ -45,9 +47,11 @@ window.addEventListener("DOMContentLoaded", function () {
       memberMenuA.forEach(function (item) {
         item.classList.add("height_62");
       });
+
+      mobileHeader.classList.add("mobile_scroll_line");
       // 회원메뉴 class 추가
     } else {
-      console.log("스크롤최상단");
+      // console.log("스크롤최상단");
       logo.classList.remove("logo_hide");
       sale.classList.remove("sale_hide");
       linkSite.classList.remove("link_site_hide");
@@ -59,6 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
       memberMenuA.forEach(function (item) {
         item.classList.remove("height_62");
       });
+      mobileHeader.classList.remove("mobile_scroll_line");
     }
   });
 });

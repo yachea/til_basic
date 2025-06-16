@@ -15,11 +15,11 @@
   display: block;
   width: 100%;
 }
+
 .title {
   font-size: 28px;
   font-weight: 600;
   color: #000;
-  /* 글자밖에 없는 경우 하기 */
   text-align: center;
 }
 .subtitle {
@@ -28,7 +28,9 @@
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
+  white-space: nowrap;
 }
+
 .tour_top_category {
   display: flex;
   justify-content: center;
@@ -43,21 +45,23 @@
 .tour_button_list li button {
   padding: 0 18px;
   border: 1px solid #e5e5e5;
-  /* padding: 10px 20px; */
+  /* padding: 11px 16px; */
   height: 44px;
   background-color: #fff;
   cursor: pointer;
-  /* 높이의 반으로 계산 */
   border-radius: 22px;
+  white-space: nowrap;
 }
 .tour_button_list li button:active {
-  opacity: 0.6;
+  opacity: 0.65;
 }
+
 .tour_focus {
   background-color: #333 !important;
   font-weight: 600;
   color: #fff !important;
 }
+
 .tour_bottom {
   display: block;
   width: 100%;
@@ -66,7 +70,6 @@
   display: block;
   position: relative;
   width: 100%;
-  /* min-width: 1024px; */
 }
 .tour_slide {
   display: flex;
@@ -75,9 +78,9 @@
 .tour_item {
   display: block;
   overflow: hidden;
-  height: 365px;
   border-radius: 12px;
 }
+
 .tour_item_image {
   width: 100%;
   height: 255px;
@@ -85,7 +88,6 @@
 .tour_item_image img {
   width: 100%;
   height: 100%;
-  /* 영역에 이미지를 채워넣기 */
   object-fit: cover;
 }
 .tour_item_info {
@@ -94,29 +96,29 @@
   border-top: none;
   position: relative;
   height: calc(100% - 255px);
-  /* 위왼쪽 위오른쪽 아래왼쪽 아래오른쪽 */
-  border-radius: 0 0 12px 12px;
+  border-radius: 0px 0px 12px 12px;
 }
 .tour_item_info .tour_city {
   padding: 5px 10px;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 20px;
-  background-color: #4254ff;
+  background-color: #4154ff;
   font-size: 13px;
-  font-weight: 600;
   color: #fff;
   transform: translateY(-50%);
   border-radius: 4px;
 }
+
 .tour_item_info .tour_sale {
   font-size: 15px;
   font-weight: 400;
   color: rgb(65, 84, 255);
 }
-/* 한줄 말줄임 '...' 은 css 로 작업합니다 */
+
+/* 한줄 말줄임 ... 은 css 작업합니다. */
 .tour_item_info .tour_item_title {
-  /* 아래는 보관해 주세요. */
+  /* 아래는 보관해 두세요. */
   overflow: hidden;
   font-size: 15px;
   font-weight: 400;
@@ -132,6 +134,7 @@
 .tour_item_info .tour_price b {
   font-weight: 700;
 }
+
 .tour_slide_prev {
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
@@ -139,6 +142,7 @@
   top: 50%;
   left: 0;
   z-index: 999;
+
   width: 48px;
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -149,6 +153,7 @@
 .tour_slide_prev img {
   transform: rotate(180deg);
 }
+
 .tour_slide_next {
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
@@ -156,6 +161,7 @@
   top: 50%;
   right: 0;
   z-index: 999;
+
   width: 48px;
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -172,15 +178,17 @@
   display: flex;
   gap: 7px;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
+  justify-content: center;
   border: 1px solid #e5e5e5;
   height: 56px;
   background-color: #fff;
   font-size: 16px;
   font-weight: 700;
   color: #333;
-  border-radius: 28px;
+  border-radius: 23px;
 }
+
 .swiper-button-disabled {
   display: none !important;
 }
@@ -189,8 +197,79 @@
 @media all and (max-width: 1280px) {
 }
 @media all and (max-width: 1024px) {
-  .tour_slide_wrap {
-    width: 1024px;
+  .tour {
+    border-top: 8px solid #f0f4f4;
+  }
+  .layout {
+    max-width: 760px;
+    padding: 0px 20px;
+    overflow: hidden;
+  }
+  .tour_top {
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
+
+  .tour_top_title .title {
+    font-size: 20px;
+  }
+  .tour_top_title .subtitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .tour_button_list li button {
+    height: 38px;
+  }
+
+  /* swiper 소스 고친 트릭 */
+  .sw_tour {
+    overflow: visible !important;
+  }
+
+  .sw_tour .swiper-wrapper {
+  }
+
+  /* swiper 트릭 강제로 slide 너비를 고정 시킴 */
+  .sw_tour .swiper-slide {
+    width: 230px !important;
+  }
+  .tour_item {
+  }
+  .tour_item_image {
+    height: 138px;
+  }
+  .tour_item_info {
+    height: calc(100% - 138px);
+    padding: 10px;
+  }
+  .tour_item_info .tour_city {
+    font-size: 10px;
+  }
+  .tour_item_info .tour_sale {
+    font-size: 13px;
+    padding-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tour_item_info .tour_price {
+    font-size: 14px;
+  }
+  .tour_item_info .tour_price b {
+    font-size: 15px;
+  }
+  .tour_slide_next,
+  .tour_slide_prev {
+    display: none;
+  }
+  .tour_more_bt {
+    width: 100%;
+    border-radius: 4px;
+    height: 48px;
+  }
+  .tour_more {
+    padding-bottom: 20px;
   }
 }
 @media all and (max-width: 960px) {
