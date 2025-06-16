@@ -106,6 +106,7 @@
   color: #666;
   display: flex;
   padding: 5px 0;
+  flex-wrap: wrap;
 }
 .trip_schedule span {
   position: relative;

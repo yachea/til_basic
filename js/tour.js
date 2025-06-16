@@ -139,7 +139,7 @@ window.addEventListener("load", function () {
             />
           </div>
           <div class="tour_item_info">
-            <p class="tour_city">${tourDataArr[i].city}</p
+            <p class="tour_city">${tourDataArr[i].city}</p>
             <p class="tour_sale">${tourDataArr[i].sale}</p>
             <p class="tour_item_title">
               ${tourDataArr[i].title}
