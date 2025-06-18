@@ -30,8 +30,7 @@ window.addEventListener("load", function () {
     },
     {
       링크: "#",
-      이미지:
-        "https://common-live-vod.interparkcdn.net/data/image/20250612/14/159/20250612081529.png",
+      이미지: "images/live3.png",
       alt: "라이브",
       상태: "방송예정",
       제목: "[라마다 호텔] 해운대/여수/자은도/거제 4지점 라이브 특가🎊",
