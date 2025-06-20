@@ -24,9 +24,10 @@
 .popup_text {
   width: 100%;
   text-align: center;
-  padding: 20px;
-  font-size: 15px;
+  padding-top: 10px;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1.6;
 }
 .popup_close {
   width: 80px;
@@ -35,4 +36,5 @@
   background-color: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 20px;
+  margin-bottom: 15px;
 }
