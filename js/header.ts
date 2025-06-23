@@ -1,5 +1,3 @@
-console.log("geader.js 코드 실행");
-
 // html 의 태그구조를 모두 읽어들었다면 그때 찾아라.
 // 아래 구문 외워야 하나요?
 //  const : 웹브라우저에 보관하겠다. (불변, 상수- 절대 바꿀수없음)
@@ -9,7 +7,7 @@ console.log("geader.js 코드 실행");
 // const 변수명 = 보관데이터; (오른쪽을 왼쪽에 담는다)
 // 변수명: 반드시 명사로 지어야 함. 영어
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", (): void => {
   // 상단영역
   const headerTop: Element | null = document.querySelector(".header_top");
 
@@ -31,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const mobileHeader: Element | null = document.querySelector(".mobile_header");
 
   // 웹브라우저의 스크롤을 체크하겠다.
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", (): void => {
     // 스크롤바의 최상단
     const scY: number = window.scrollY;
     // console.log(scY);
@@ -43,15 +41,15 @@ window.addEventListener("DOMContentLoaded", function () {
       linkSite?.classList.add("link_site_hide");
       search?.classList.add("search_scroll");
       // 메인메뉴 class 추가
-      mainMenuA.forEach(function (item) {
+      mainMenuA.forEach((item: Element): void => {
         item.classList.add("height_62");
       });
-      memberMenuA.forEach(function (item) {
+      // 회원메뉴 class 추가
+      memberMenuA.forEach((item: Element): void => {
         item.classList.add("height_62");
       });
 
       mobileHeader?.classList.add("mobile_scroll_line");
-      // 회원메뉴 class 추가
     } else {
       // console.log("스크롤최상단");
       logo?.classList.remove("logo_hide");
@@ -59,10 +57,10 @@ window.addEventListener("DOMContentLoaded", function () {
       linkSite?.classList.remove("link_site_hide");
       search?.classList.remove("search_scroll");
       headerTop?.classList.remove("header_top_scroll");
-      mainMenuA.forEach(function (item) {
+      mainMenuA.forEach((item: Element): void => {
         item.classList.remove("height_62");
       });
-      memberMenuA.forEach(function (item) {
+      memberMenuA.forEach((item: Element): void => {
         item.classList.remove("height_62");
       });
       mobileHeader?.classList.remove("mobile_scroll_line");
