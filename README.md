@@ -1249,3 +1249,52 @@ $pc-w: 760px;
 # 8. 파비콘 및 아이콘 만들기
 
 - https://realfavicongenerator.net/
+
+# 9. SEO
+
+- Search Engine Optimization : 검색 엔진 최적화
+- 구글, 네이버 : 검색어를 입력 시 관련 순위로 목록 제시함.
+
+# 9.1. 기본적인 SEO 작성 목록
+
+- `<title>타이틀</title>` : 고정된 글자. 검색 결과 타이틀
+- `<meta name="description" content="서비스설명" />` : 요약설명, 검색 결과 내용
+- `<meta name="keyword" content="키워드" /> ` : 핵심 키워드
+- `<meta property="og:title" content="제목" />` : SNS 공유시 표현 제목
+- `<meta property="og:description" content="서비스설명" />` : SNS 공유시 설명
+- `<meta property="og:image" content="https~" />` : 미리보기 이미지 url
+
+## 9.2. 검색 엔진 로봇을 위한 설정
+
+- `robots.txt` 파일 생성
+
+```txt
+User-agent: *
+Allow: /
+Sitemap: https://yourdomain.com/sitemap.xml
+```
+
+- `sitemap.xml` 파일 생성
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://til-basic.vercel.app</loc>
+        <lastmod>2025-06-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://til-basic.vercel.app/ceo</loc>
+        <lastmod>2025-06-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.0</priority>
+    </url>
+
+</urlset>
+```
+
+## 9.3. 네이버와 구글 검색엔진 등록 해 보기
